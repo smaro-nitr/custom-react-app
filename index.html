@@ -11,22 +11,22 @@
         
         <script type="text/babel">
             var styleObject = {
-                backgroundColor: 'red'
+                fontFamily : 'Arial'
             };
 
             var elementZero = <h3>Subhendu Here</h3>;
             var elementOne = <button className="contactButton">Contact Me</button>;
             
-            function HelloWorld(){
-                return <h4>Say Hello to the World</h4>
+            function HelloTo(props){
+                return <h4>Say Hello to the {props.whom}</h4>
             }
 
             var element = (
-                <div class={styleObject}>
+                <div style={styleObject}>
                     <div><h4>Hello</h4></div>
                     <div>{elementZero}</div>
                     <div>{elementOne}</div>
-                    <div><HelloWorld/></div>
+                    <div><HelloTo whom="World"/></div>
                 </div>
             );
 

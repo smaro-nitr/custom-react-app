@@ -1,0 +1,20 @@
+{
+  "name": "react-js-crud",
+  "version": "1.0.0",
+  "description": "npm install connect serve-static --only=dev -save",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smaro-nitr/react-js-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smaro-nitr/react-js-crud/issues"
+  },
+  "homepage": "https://github.com/smaro-nitr/react-js-crud#readme"
+}

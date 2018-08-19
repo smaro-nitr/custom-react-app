@@ -1,1 +1,2 @@
-npm install -g nodemon / npm install --save -dev nodemon
+npm install connect -S -E
+npm install serve-static -S -E

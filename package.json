@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/smaro-nitr/react-js-crud/issues"
   },
-  "homepage": "https://github.com/smaro-nitr/react-js-crud#readme"
+  "homepage": "https://github.com/smaro-nitr/react-js-crud#readme",
+  "dependencies": {
+    "connect": "3.6.6",
+    "serve-static": "1.13.2"
+  }
 }

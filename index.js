@@ -109,7 +109,7 @@ class Details extends React.Component{
 class Tab extends React.Component{
     render(){
         return (
-            <a className="nav-item nav-link" style={{color: this.props.active? 'red': 'blue'}} onClick={() => {this.props.clickHandler(this.props.id, this.props.name)}}>
+            <a className="nav-item nav-link" style={{color: this.props.active? 'blue': 'gray'}} onClick={() => {this.props.clickHandler(this.props.id, this.props.name)}}>
                 {this.props.name}
             </a>
           )

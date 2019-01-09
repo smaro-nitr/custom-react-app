@@ -215,7 +215,7 @@ class ControlledInput extends React.Component {
         this.handleChange = this.handleChange.bind(this)
     }
     handleChange(event) {
-        this.setState({ [event.target.name] : [event.target.name][0] === "checkName" ? event.target.checked : event.target.value })
+        this.setState({ [event.target.name]: [event.target.name][0] === "checkName" ? event.target.checked : event.target.value })
     }
     render() {
         var array = ["apple", "banana", "carrot", "donuts"]
@@ -250,6 +250,37 @@ class ControlledInput extends React.Component {
     }
 }
 
+/*L1 - API Components*/
+class Api extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = { result: { MGLT: "loading .." } }
+    }
+
+    componentWillMount() {
+        fetch("https://swapi.co/api/starships/" + this.props.starshipId)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.MGLT) {
+                    this.setState({ result: data })
+                } else {
+                    this.setState({ result: { MGLT: "not available" } })
+                }
+            })
+            .catch(error => {
+                this.setState({ result: { MGLT: "error" } })
+            })
+    }
+
+    render() {
+        return (
+            <div className="card card-body">
+                {this.state.result.MGLT}
+            </div>
+        )
+    }
+}
+
 /*Final Rendering Element*/
 var renderElement = (
     <div> <br />
@@ -258,6 +289,7 @@ var renderElement = (
         <Navigator /> <br />
         <TriviaGame /> <br />
         <ControlledInput /><br />
+        <Api starshipId="9" /><br />
     </div>
 )
 
